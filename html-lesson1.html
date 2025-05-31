@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-  <title>HTML Lesson 1 - Εισαγωγή</title>
+  <title>HTML Lesson 1 - Introduction to Web Development</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
@@ -210,18 +210,43 @@
   </header>
 
   <main>
-    <h1>Μάθημα 1: Εισαγωγή στο HTML</h1>
+    <h1>HTML Lesson 1: Introduction to Web Development</h1>
 
     <div class="section">
-      <h2>📘 Θεωρία</h2>
-      <p>Το HTML είναι η γλώσσα που χρησιμοποιούμε για να δημιουργήσουμε ιστοσελίδες. Περιλαμβάνει tags (ετικέτες) που καθορίζουν τη δομή του περιεχομένου.</p>
+      <h2>What is the Web?</h2>
+      <p>The <strong>World Wide Web</strong> (often simply called “the web”) is a vast system of connected documents and 
+        multimedia content, all accessed via the Internet. When you open a browser like Chrome, Safari, 
+        or Firefox and type in a web address, you’re using the web. It allows users to visit websites, 
+        access information, watch videos, shop, play games, and much more—all through web pages displayed on screen.</p>
+        <p>The web operates on a fundamental idea: <strong>request</strong> and <strong>response</strong>. When you visit 
+          a web page, your browser sends a request to a server, which responds with the data needed to display that page.</p>
+
+    <!-- <div class="section"> -->
+      <h2>How the Web Works</h2>
+      <p>At the heart of the web is a model called <strong>client-server architecture</strong>. Here's how it works:
+      When you type a website address (also called a <strong>URL</strong>) into your web browser, your browser becomes 
+      the client. It sends a message to a <strong>web server</strong>, which is a computer that hosts the website. This 
+      message asks the server to send back the contents of the page—usually written in HTML, CSS, and JavaScript.</p>
+      <p>The server receives the request, finds the appropriate files, and sends them back to the 
+        browser. Your browser then reads the code and renders the page on your screen.</p>
+      <p>This process happens in seconds, often in less than a second, and it's repeated every 
+        time you visit a new page or interact with a website.</p>
+        <p style="text-align: center;">
+    <img align="center" src="request-response.png" width="400" height="400" alt="Request-Response">
+    </p>
+
+<h2>Understanding URLs</h2>
+
+
+
+
       <pre><code>&lt;html&gt;
   &lt;head&gt;&lt;title&gt;My Page&lt;/title&gt;&lt;/head&gt;
   &lt;body&gt;
     &lt;h1&gt;Hello World&lt;/h1&gt;
   &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-    </div>
+    <!-- </div> -->
 
 
 <div class="code-container">
@@ -258,14 +283,14 @@
     </div>
 <!-- Πλοήγηση Μαθημάτων -->
 <div class="section" style="text-align: center;">
-  <a href="html-lesson0.html" class="btn">⬅ Προηγούμενο</a>
-  <a href="html-lesson2.html" class="btn">Επόμενο ➡</a>
+  <!-- <a href="html-lesson0.html" class="btn">⬅ Previous</a> -->
+  <a href="html-lesson2.html" class="btn">Next ➡</a>
 </div>
 
 <!-- Σύστημα Προόδου -->
 <div class="section progress">
   <label>
-    <input type="checkbox" id="mark-complete" /> Μαρκάρισμα ως ολοκληρωμένο
+    <input type="checkbox" id="mark-complete" /> Check when you are done
   </label>
   <p id="progress-status"></p>
 </div>
@@ -281,18 +306,18 @@
 </div>
 
 <!-- Υποβολή Ερώτησης -->
-<div class="section">
+<!-- <div class="section">
   <h2>💬 Έχεις Απορία;</h2>
   <form onsubmit="submitQuestion(event)">
     <textarea id="user-question" placeholder="Γράψε την ερώτησή σου εδώ..." required></textarea>
     <button class="btn" type="submit">Υποβολή</button>
     <p id="question-feedback"></p>
   </form>
-</div>
+</div> -->
 
-    <div class="section progress">
+    <!-- <div class="section progress">
       <span class="completed">✔ Ολοκληρώθηκε</span>
-    </div>
+    </div> -->
   </main>
 
   <footer>
