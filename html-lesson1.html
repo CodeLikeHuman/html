@@ -334,13 +334,36 @@ document.querySelector("h1").addEventListener("click", function() {
 
  <div class="section">
       <h2>📝 Quiz</h2>
-      <form class="quiz" onsubmit="return checkAnswer(event)">
-        <p>Ποιο tag χρησιμοποιείται για επικεφαλίδα επιπέδου 1;</p>
-        <label><input type="radio" name="q1" value="a" /> &lt;p&gt;</label><br />
-        <label><input type="radio" name="q1" value="b" /> &lt;h1&gt;</label><br />
-        <label><input type="radio" name="q1" value="c" /> &lt;div&gt;</label><br />
-        <button class="btn" type="submit">Έλεγχος</button>
-        <p id="quiz-result"></p>
+      <form class="quiz" onsubmit="return checkAnswer1(event)">
+        <p>What is the primary function of a web browser in the client-server model?</p>
+        <label><input type="radio" name="q1" value="a" /> To host websites and serve content to users</label><br />
+        <label><input type="radio" name="q1" value="b" /> To send requests to servers and display the received content</label><br />
+        <label><input type="radio" name="q1" value="c" />To manage domain names and route internet traffic</label><br />
+        <label><input type="radio" name="q1" value="d" />To store and manage website databases</label><br />
+        <button class="btn" type="submit">Check</button>
+        <p id="quiz-result1"></p>
+      </form>
+    </div>
+ <div class="section">
+          <form class="quiz" onsubmit="return checkAnswer2(event)">
+        <p>In the URL https://www.example.com/about, what does /about represent?</p>
+        <label><input type="radio" name="q2" value="a" /> The protocol used for communication</label><br />
+        <label><input type="radio" name="q2" value="b" /> The domain name of the website</label><br />
+        <label><input type="radio" name="q2" value="c" />The path to a specific resource on the server</label><br />
+        <label><input type="radio" name="q2" value="d" />The query string containing parameters</label><br />
+        <button class="btn" type="submit">Check</button>
+        <p id="quiz-result2"></p>
+      </form>
+    </div>
+ <div class="section">
+          <form class="quiz" onsubmit="return checkAnswer3(event)">
+        <p>Which combination correctly matches each web technology to its primary role?</p>
+        <label><input type="radio" name="q3" value="a" /> HTML - Styling; CSS - Structure; JavaScript - Content</label><br />
+        <label><input type="radio" name="q3" value="b" /> HTML - Structure; CSS - Styling; JavaScript - Interactivity</label><br />
+        <label><input type="radio" name="q3" value="c" />HTML - Interactivity; CSS - Content; JavaScript - Structure</label><br />
+        <label><input type="radio" name="q3" value="d" />HTML - Content; CSS - Interactivity; JavaScript - Styling</label><br />
+        <button class="btn" type="submit">Check</button>
+        <p id="quiz-result3"></p>
       </form>
     </div>
 
@@ -378,15 +401,39 @@ document.querySelector("h1").addEventListener("click", function() {
   }
 
   // Quiz Logic
-  function checkAnswer(event) {
+  function checkAnswer1(event) {
     event.preventDefault();
     const answer = document.querySelector('input[name="q1"]:checked');
-    const result = document.getElementById("quiz-result");
+    const result = document.getElementById("quiz-result1");
     if (answer?.value === "b") {
-      result.textContent = "Σωστά! ✅";
+      result.textContent = "Correct! ✅";
       result.style.color = "lightgreen";
     } else {
-      result.textContent = "Λάθος. Προσπάθησε ξανά. ❌";
+      result.textContent = "Wrong. Try again. ❌";
+      result.style.color = "pink";
+    }
+  }
+    function checkAnswer2(event) {
+    event.preventDefault();
+    const answer = document.querySelector('input[name="q2"]:checked');
+    const result = document.getElementById("quiz-result2");
+    if (answer?.value === "c") {
+      result.textContent = "Correct! ✅";
+      result.style.color = "lightgreen";
+    } else {
+      result.textContent = "Wrong. Try again. ❌";
+      result.style.color = "pink";
+    }
+  }
+      function checkAnswer3(event) {
+    event.preventDefault();
+    const answer = document.querySelector('input[name="q3"]:checked');
+    const result = document.getElementById("quiz-result3");
+    if (answer?.value === "b") {
+      result.textContent = "Correct! ✅";
+      result.style.color = "lightgreen";
+    } else {
+      result.textContent = "Wrong. Try again. ❌";
       result.style.color = "pink";
     }
   }
@@ -399,7 +446,7 @@ document.querySelector("h1").addEventListener("click", function() {
   checkbox.addEventListener("change", () => {
     if (checkbox.checked) {
       localStorage.setItem(lessonKey, "true");
-      status.innerHTML = '<span class="completed">✔ Ολοκληρώθηκε</span>';
+      status.innerHTML = '<span class="completed">✔ Completed</span>';
     } else {
       localStorage.removeItem(lessonKey);
       status.textContent = "";
@@ -408,7 +455,7 @@ document.querySelector("h1").addEventListener("click", function() {
 
   if (localStorage.getItem(lessonKey) === "true") {
     checkbox.checked = true;
-    status.innerHTML = '<span class="completed">✔ Ολοκληρώθηκε</span>';
+    status.innerHTML = '<span class="completed">✔ Completed</span>';
   }
 
   // Submit Question
