@@ -236,41 +236,103 @@
     </p>
 
 <h2>Understanding URLs</h2>
+<p>A <strong>URL</strong> stands for <strong>Uniform Resource Locator</strong>, and it's the address used to locate a resource on the web.</p>
+<p>Consider this example URL:</p>
+<p><strong>https://www.example.com/about</strong></p>
+<p>Let's break it down:</p>
+<ul>
+  <li><strong>https://</strong> is the protocol, which tells the browser how to communicate with the server. Most modern sites use HTTPS (the secure version of HTTP).</li>
+  <li><strong>www.example.com</strong> is the domain name, which maps to a specific server on the internet.</li>
+  <li><strong>/about</strong> is the path, which points to a particular file or resource on that server.</li>
+</ul>
+<p>Together, these parts tell your browser exactly where to go and what to request.</p>
 
+<h2>What is HTTP?</h2>
+<p>HTTP stands for <strong>HyperText Transfer Protocol</strong>. It is the foundation of communication on the web. When 
+  your browser requests a page, it uses HTTP to ask the server for the files it needs. The server, in turn, uses 
+  HTTP to send those files back.</p>
+<p>HTTP is a <strong>stateless protocol</strong>, which means each request is independent. Every 
+  time your browser asks for something, the server responds without remembering previous 
+  requests (unless features like cookies or sessions are used).</p>
+<h3>Common HTTP Methods</h3>
+<p>HTTP defines several types of requests, known as <strong>methods</strong>. These tell the server what the browser wants to do.</p>
+<ul>
+  <li><strong>GET:</strong> Used to retrieve data from the server. When you visit a website, your browser uses a GET request.</li>
+  <li><strong>POST:</strong> Used to send data to the server, often when submitting a form (like logging in or signing up).</li>
+  <li><strong>PUT:</strong> Used to update an existing resource on the server.</li>
+  <li><strong>DELETE:</strong> Used to remove a resource.</li>
+  <li><strong>HEAD:</strong> Similar to GET, but it only asks for the headers (metadata), not the actual content.</li>
+</ul>
+<p>Understanding these methods is key to understanding how web applications interact with servers.</p>
 
-
-
-      <pre><code>&lt;html&gt;
-  &lt;head&gt;&lt;title&gt;My Page&lt;/title&gt;&lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Hello World&lt;/h1&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</code></pre>
-    <!-- </div> -->
-
-
+<h2>The Core Technologies of the Web: HTML, CSS, and JavaScript</h2>
+<p>Modern web pages are built using three primary technologies: HTML, CSS, and JavaScript. Each plays a distinct role.</p>
+<h3>HTML - The Structure</h3>
+<p><strong>HTML</strong> stands for <strong>HyperText Markup Language</strong>, and it's the backbone of any web page. It defines 
+  the <strong>structure and content</strong>—such as headings, paragraphs, images, lists, and links.</p>
+  <p>For example:</p>
 <div class="code-container">
   <button class="copy-btn">📋 Copy</button>
   <pre><code class="language-html">
-&lt;h1&gt;Hello, World!&lt;/h1&gt;
+    &lt;h1&gt;Welcome to My Site&lt;/h1&gt;
+    &lt;p&gt;This is my homepage.&lt;/p&gt;
   </code></pre>
 </div>
+<p>In this code, &lt;h1&gt;creates a large heading, and &lt;p&gt; defines a paragraph. Every visible element on a web page starts with HTML.</p>
 
-<div class="section">
-      <h2>🧪 Δοκίμασε το!</h2>
-      <textarea id="editor">
-<html>
-  <body>
-    <h1>Hello world</h1>
-    <p>Γράψε εδώ τον HTML κώδικά σου!</p>
-  </body>
-</html>
-      </textarea>
-      <button class="btn" onclick="runCode()">Δες το αποτέλεσμα</button>
-      <iframe id="output"></iframe>
-    </div>
+<h3>CSS - The Style</h3>
+<p><strong>CSS</strong> stands for <strong>Cascading Style Sheets</strong>. It's responsible for how a web page 
+<strong>looks</strong>—the layout, fonts, colors, spacing, and overall design. Without CSS, web pages would look 
+very plain and difficult to use.</p>
+<p>For example:</p>
+<div class="code-container">
+  <button class="copy-btn">📋 Copy</button>
+  <pre><code class="language-css">
+h1 {
+  color: navy;
+  text-align: center;
+}
+  </code></pre>
+</div>
+<p>This style makes the heading text navy blue and centers it on the page.</p>
+<p>CSS allows web developers to create beautiful, responsive designs that work across devices.</p>
 
-    <div class="section">
+<h2>JavaScript - The Behavior</h2>
+<p><strong>JavaScript</strong> is a <strong>programming language</strong> used to add <strong>interactivity and dynamic behavior</strong> 
+  to web pages. It can respond to user actions like clicks, form submissions, and scrolling.</p>
+<p>For example:</p>
+<div class="code-container">
+  <button class="copy-btn">📋 Copy</button>
+  <pre><code class="language-javascript">
+document.querySelector("h1").addEventListener("click", function() {
+  alert("You clicked the heading!");
+});
+  </code></pre>
+</div>
+<p>This script displays a pop-up alert when the user clicks on the heading. JavaScript powers 
+  many modern web features—like image sliders, form validation, and real-time updates.</p>
+<h2>How HTML, CSS, and JavaScript Work Together</h2>
+<p>These three technologies work together seamlessly to create interactive, visually appealing web experiences:</p>
+<ul>
+  <li><strong>HTML</strong> provides the content.</li>
+  <li><strong>CSS</strong> styles and formats the content.</li>
+  <li><strong>JavaScript</strong></li>makes the content dynamic and interactive.
+</ul>
+<p>When your browser receives a webpage, it first processes the HTML to create the 
+  structure. Then, it applies the CSS to style it. Finally, it runs JavaScript to add any interactive features.</p>
+
+<h2>Recap and Key Concepts</h2>
+<p>To wrap up, here are the essential ideas from this lesson:</p>
+<ul>
+  <li>The web operates on a <strong>client-server model</strong>, where your browser (client) requests resources from a server.</li>
+  <li><strong>HTTP</strong> is the protocol used to request and deliver resources.</li>
+  <li>A <strong>URL</strong> identifies the location of a resource on the web.</li>
+  <li>Web pages are built using <strong>HTML (structure), CSS (style),</strong> and <strong>JavaScript (interactivity).</strong></li>
+</ul>
+<p>Understanding these basics gives you a strong foundation for learning more 
+  advanced web development topics like frameworks, APIs, databases, and full-stack applications.</p>
+
+ <div class="section">
       <h2>📝 Quiz</h2>
       <form class="quiz" onsubmit="return checkAnswer(event)">
         <p>Ποιο tag χρησιμοποιείται για επικεφαλίδα επιπέδου 1;</p>
@@ -281,13 +343,8 @@
         <p id="quiz-result"></p>
       </form>
     </div>
-<!-- Πλοήγηση Μαθημάτων -->
-<div class="section" style="text-align: center;">
-  <!-- <a href="html-lesson0.html" class="btn">⬅ Previous</a> -->
-  <a href="html-lesson2.html" class="btn">Next ➡</a>
-</div>
 
-<!-- Σύστημα Προόδου -->
+    <!-- Σύστημα Προόδου -->
 <div class="section progress">
   <label>
     <input type="checkbox" id="mark-complete" /> Check when you are done
@@ -295,29 +352,12 @@
   <p id="progress-status"></p>
 </div>
 
-<!-- AI Βοηθός (Mock FAQ style) -->
-<div class="section">
-  <h2>🤖 Βοήθεια από τον AI Βοηθό</h2>
-  <p><strong>Ερώτηση:</strong> Τι κάνει το &lt;h1&gt; tag;</p>
-  <p><strong>Απάντηση:</strong> Δημιουργεί μια επικεφαλίδα επιπέδου 1. Είναι σημαντικό για τη δομή και SEO μιας σελίδας.</p>
-
-  <p><strong>Ερώτηση:</strong> Μπορώ να έχω πολλά &lt;h1&gt; σε μια σελίδα;</p>
-  <p><strong>Απάντηση:</strong> Τεχνικά ναι, αλλά συνιστάται να έχεις μόνο ένα κύριο &lt;h1&gt; για καλύτερη προσβασιμότητα.</p>
+<!-- Πλοήγηση Μαθημάτων -->
+<div class="section" style="text-align: center;">
+  <!-- <a href="html-lesson0.html" class="btn">⬅ Previous</a> -->
+  <a href="html-lesson2.html" class="btn">Next ➡</a>
 </div>
 
-<!-- Υποβολή Ερώτησης -->
-<!-- <div class="section">
-  <h2>💬 Έχεις Απορία;</h2>
-  <form onsubmit="submitQuestion(event)">
-    <textarea id="user-question" placeholder="Γράψε την ερώτησή σου εδώ..." required></textarea>
-    <button class="btn" type="submit">Υποβολή</button>
-    <p id="question-feedback"></p>
-  </form>
-</div> -->
-
-    <!-- <div class="section progress">
-      <span class="completed">✔ Ολοκληρώθηκε</span>
-    </div> -->
   </main>
 
   <footer>
