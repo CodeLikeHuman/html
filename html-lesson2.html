@@ -279,148 +279,61 @@
  <img align="center" src="./lesson2/node_installation8.png" alt="Node.js official site">
  </p>
 
+ <h2>WebStorm Installation</h2>
+<p><strong>WebStorm</strong> is a powerful, professional IDE (Integrated Development Environment) made 
+  by JetBrains, designed specifically for JavaScript, TypeScript, and modern web development. In simple terms,
+WebStorm is a coding tool that helps you write, debug, and manage web projects — smarter and faster.</p>
 
-
-
-
- 
-
-
-    <!-- <div class="section"> -->
-      <h2>How the Web Works</h2>
-      <p>At the heart of the web is a model called <strong>client-server architecture</strong>. Here's how it works:
-      When you type a website address (also called a <strong>URL</strong>) into your web browser, your browser becomes 
-      the client. It sends a message to a <strong>web server</strong>, which is a computer that hosts the website. This 
-      message asks the server to send back the contents of the page—usually written in HTML, CSS, and JavaScript.</p>
-      <p>The server receives the request, finds the appropriate files, and sends them back to the 
-        browser. Your browser then reads the code and renders the page on your screen.</p>
-      <p>This process happens in seconds, often in less than a second, and it's repeated every 
-        time you visit a new page or interact with a website.</p>
-        <p style="text-align: center;">
-    <img align="center" src="request-response.png" width="800" height="400" alt="Request-Response">
-    </p>
-
-<h2>Understanding URLs</h2>
-<p>A <strong>URL</strong> stands for <strong>Uniform Resource Locator</strong>, and it's the address used to locate a resource on the web.</p>
-<p>Consider this example URL:</p>
-<p><strong>https://www.example.com/about</strong></p>
-<p>Let's break it down:</p>
+<p>Some of the fueatures that WebStorm has to offer us are:</p>
 <ul>
-  <li><strong>https://</strong> is the protocol, which tells the browser how to communicate with the server. Most modern sites use HTTPS (the secure version of HTTP).</li>
-  <li><strong>www.example.com</strong> is the domain name, which maps to a specific server on the internet.</li>
-  <li><strong>/about</strong> is the path, which points to a particular file or resource on that server.</li>
+  <li>Smart Code Editor - Autocompletion, suggestions, real-time error detection</li>
+  <li>Powerful Debugger - Built-in debugger for client-side and Node.js apps</li>
+  <li>Integrated Tools - Version control (Git), terminal, npm, ESLint, Prettier</li>
+  <li>Framework Support - React, Angular, Vue, Express, Next.js, and more</li>
+  <li>Testing Support - Mocha, Jest, Cypress</li>
+  <li>Plugin Ecosystem - Customize with hundreds of plugins and themes</li>
 </ul>
-<p>Together, these parts tell your browser exactly where to go and what to request.</p>
 
-<h2>What is HTTP?</h2>
-<p>HTTP stands for <strong>HyperText Transfer Protocol</strong>. It is the foundation of communication on the web. When 
-  your browser requests a page, it uses HTTP to ask the server for the files it needs. The server, in turn, uses 
-  HTTP to send those files back.</p>
-<p>HTTP is a <strong>stateless protocol</strong>, which means each request is independent. Every 
-  time your browser asks for something, the server responds without remembering previous 
-  requests (unless features like cookies or sessions are used).</p>
-<h3>Common HTTP Methods</h3>
-<p>HTTP defines several types of requests, known as <strong>methods</strong>. These tell the server what the browser wants to do.</p>
-<ul>
-  <li><strong>GET:</strong> Used to retrieve data from the server. When you visit a website, your browser uses a GET request.</li>
-  <li><strong>POST:</strong> Used to send data to the server, often when submitting a form (like logging in or signing up).</li>
-  <li><strong>PUT:</strong> Used to update an existing resource on the server.</li>
-  <li><strong>DELETE:</strong> Used to remove a resource.</li>
-  <li><strong>HEAD:</strong> Similar to GET, but it only asks for the headers (metadata), not the actual content.</li>
-</ul>
-<p>Understanding these methods is key to understanding how web applications interact with servers.</p>
+<p>Overall, WebStorm is ideal for Front-end development (React, Vue, Angular), Back-end development with Node.js or
+  for Full-stack JavaScript/TypeScript projects.
+</p>
+<p>WebStorm is absolutely free for home projects and personal learning and practice. If you use it in a professional environment (in a company) then
+  you need to pay a small fee to obtain a valid license.
+</p>
+<p>Go to the official site: <a href="https://www.jetbrains.com/webstorm/">WebStorm download</a></p>
+  <p style="text-align: center;">
+ <img align="center" src="./lesson2/webstorm_installation8.png" width=900, height=400 alt="WebStorm installation">
+ </p>
+<p>Run the .exe installer and accept the default values during the installation process.</p>
 
-<h2>The Core Technologies of the Web: HTML, CSS, and JavaScript</h2>
-<p>Modern web pages are built using three primary technologies: HTML, CSS, and JavaScript. Each plays a distinct role.</p>
-<h3>HTML - The Structure</h3>
-<p><strong>HTML</strong> stands for <strong>HyperText Markup Language</strong>, and it's the backbone of any web page. It defines 
-  the <strong>structure and content</strong>—such as headings, paragraphs, images, lists, and links.</p>
-  <p>For example:</p>
-<div class="code-container">
-  <button class="copy-btn">📋 Copy</button>
-  <pre><code class="language-html">
-    &lt;h1&gt;Welcome to My Site&lt;/h1&gt;
-    &lt;p&gt;This is my homepage.&lt;/p&gt;
-  </code></pre>
-</div>
-<p>In this code, &lt;h1&gt;creates a large heading, and &lt;p&gt; defines a paragraph. Every visible element on a web page starts with HTML.</p>
-
-<h3>CSS - The Style</h3>
-<p><strong>CSS</strong> stands for <strong>Cascading Style Sheets</strong>. It's responsible for how a web page 
-<strong>looks</strong>—the layout, fonts, colors, spacing, and overall design. Without CSS, web pages would look 
-very plain and difficult to use.</p>
-<p>For example:</p>
-<div class="code-container">
-  <button class="copy-btn">📋 Copy</button>
-  <pre><code class="language-css">
-h1 {
-  color: navy;
-  text-align: center;
-}
-  </code></pre>
-</div>
-<p>This style makes the heading text navy blue and centers it on the page.</p>
-<p>CSS allows web developers to create beautiful, responsive designs that work across devices.</p>
-
-<h2>JavaScript - The Behavior</h2>
-<p><strong>JavaScript</strong> is a <strong>programming language</strong> used to add <strong>interactivity and dynamic behavior</strong> 
-  to web pages. It can respond to user actions like clicks, form submissions, and scrolling.</p>
-<p>For example:</p>
-<div class="code-container">
-  <button class="copy-btn">📋 Copy</button>
-  <pre><code class="language-javascript">
-document.querySelector("h1").addEventListener("click", function() {
-  alert("You clicked the heading!");
-});
-  </code></pre>
-</div>
-<p>This script displays a pop-up alert when the user clicks on the heading. JavaScript powers 
-  many modern web features—like image sliders, form validation, and real-time updates.</p>
-<h2>How HTML, CSS, and JavaScript Work Together</h2>
-<p>These three technologies work together seamlessly to create interactive, visually appealing web experiences:</p>
-<ul>
-  <li><strong>HTML</strong> provides the content.</li>
-  <li><strong>CSS</strong> styles and formats the content.</li>
-  <li><strong>JavaScript</strong></li>makes the content dynamic and interactive.
-</ul>
-<p>When your browser receives a webpage, it first processes the HTML to create the 
-  structure. Then, it applies the CSS to style it. Finally, it runs JavaScript to add any interactive features.</p>
+<p>Before you start WebStorm, create an empty folder on your hard drive. That is going to be the place where we will save our web projects.</p>
+  <p style="text-align: center;">
+ <img align="center" src="./lesson2/folder_creation9.png"  alt="WebStorm installation">
+ </p>
+<p>Start WebStorm and click on the New Prject button to create a new project.</p>
+  <p style="text-align: center;">
+ <img align="center" src="./lesson2/project_creation10.png"  alt="WebStorm installation">
+ </p>
+<p>From the Generators List choose Express. This option will allow us to use Node.js as a Web Server automatically without any further manual configuration.
+  Please notice that WebStorm has already detected the Node.js installation. Make sure that on the Location field you have chosen the folder you have created
+  on the previous step.
+</p>
+  <p style="text-align: center;">
+ <img align="center" src="./lesson2/project_creation11.png"  alt="WebStorm installation">
+ </p>
+ <p>After few seconds the project will be ready to be executed. Our environment is completed and we have all the necessary tools to develop
+  professional looking websites. However, there is no html file included on the project yet to show. We will start creating our 
+  first web page from the next lesson.
+ </p>
+  <p style="text-align: center;">
+ <img align="center" src="./lesson2/project_creation12.png"  alt="WebStorm installation">
+ </p>
 
 
 
 
 
 
-
-      <pre><code>&lt;html&gt;
-  &lt;head&gt;&lt;title&gt;My Page&lt;/title&gt;&lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Hello World&lt;/h1&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</code></pre>
-    <!-- </div> -->
-
-
-<div class="code-container">
-  <button class="copy-btn">📋 Copy</button>
-  <pre><code class="language-html">
-&lt;h1&gt;Hello, World!&lt;/h1&gt;
-  </code></pre>
-</div>
-
-<div class="section">
-      <h2>🧪 Δοκίμασε το!</h2>
-      <textarea id="editor">
-<html>
-  <body>
-    <h1>Hello world</h1>
-    <p>Γράψε εδώ τον HTML κώδικά σου!</p>
-  </body>
-</html>
-      </textarea>
-      <button class="btn" onclick="runCode()">Δες το αποτέλεσμα</button>
-      <iframe id="output"></iframe>
-    </div>
 
     <div class="section">
       <h2>📝 Quiz</h2>
