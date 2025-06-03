@@ -210,16 +210,81 @@
   </header>
 
   <main>
-    <h1>HTML Lesson 1: Introduction to Web Development</h1>
+    <h1>HTML Lesson 2: Node.Js and WebStorm Installation</h1>
 
     <div class="section">
-      <h2>What is the Web?</h2>
-      <p>The <strong>World Wide Web</strong> (often simply called “the web”) is a vast system of connected documents and 
-        multimedia content, all accessed via the Internet. When you open a browser like Chrome, Safari, 
-        or Firefox and type in a web address, you’re using the web. It allows users to visit websites, 
-        access information, watch videos, shop, play games, and much more—all through web pages displayed on screen.</p>
-        <p>The web operates on a fundamental idea: <strong>request</strong> and <strong>response</strong>. When you visit 
-          a web page, your browser sends a request to a server, which responds with the data needed to display that page.</p>
+      <h2>What is Node.js?</h2>
+      <p><strong>Node.js</strong> is a runtime environment that allows you to run <strong>JavaScript code outside the browser</strong> — like on 
+        your computer or a server. In other words, while JavaScript was originally made to run in the browser, Node.js lets you run 
+        JavaScript anywhere — especially on the server side.</p>
+
+      <p>Some key features of Node.js are:</p>
+      <ul>
+        <li>compiles JavaScript to machine code</li>
+        <li>comes with Node Package Manager, the world's largest software registry (used to install libraries like Express)</li>
+        <li>designed for performance — handles many connections at once without waiting (asynchronous)</li>
+        <li>runs on Windows, macOS, and Linux.</li>
+        <li>Full-stack developers can use the same language on front-end and back-end</li>
+      </ul>
+<p>Usually, we use Node.js for building web servers and APIs, built real-time apps like chat applications,
+  construct microservices or backend services for web and mobile apps.
+</p>
+<p>Do not worry if you can not understand all the terms. In our case, we just need to use Node.js as a simple Web server.
+  So let's proceed with the installation.
+</p>
+<h2>Node.js installation</h2>
+<p>First, we need to visit the official Node.js website: <a href="https://nodejs.org">https://nodejs.org</a>.</p>
+<p>Click on the LTS (Long Term Support) button which will download a stable and reliable version of Node.js recommended for most users.</p>
+ <p style="text-align: center;">
+ <img align="center" src="./lesson2/node_website.png" width="800" height="400" alt="Node.js official site">
+ </p>
+
+<p>After you download it, run the .msi installer assuming that you are running Windows Operating System. Follow 
+  the prompts:
+  <ul>
+    <li>accept the license agreement</li>
+    <li>Choose installation path (default is fine).</li>
+    <li>Select components (leave defaults checked).</li>
+    <li>Optionally, check Add to PATH (recommended).</li>
+  </ul>
+</p>
+ <p style="text-align: center;">
+ <img align="center" src="./lesson2/node_installation1.png" alt="Node.js official site">
+ </p>
+  <p style="text-align: center;">
+ <img align="center" src="./lesson2/node_installation2.png" alt="Node.js official site">
+ </p>
+  <p style="text-align: center;">
+ <img align="center" src="./lesson2/node_installation3.png" alt="Node.js official site">
+ </p>
+  <p style="text-align: center;">
+ <img align="center" src="./lesson2/node_installation4.png" alt="Node.js official site">
+ </p>
+  <p style="text-align: center;">
+ <img align="center" src="./lesson2/node_installation5.png" alt="Node.js official site">
+ </p>
+
+<p>Click Install.</p>
+  <p style="text-align: center;">
+ <img align="center" src="./lesson2/node_installation6.png" alt="Node.js official site">
+ </p>
+
+<p>Once installation finishes, click Finish.</p>
+  <p style="text-align: center;">
+ <img align="center" src="./lesson2/node_installation7.png" alt="Node.js official site">
+ </p>
+
+<p>Let's verify the installation by typing the following two commands in a terminal (CMD) window.</p>
+  <p style="text-align: center;">
+ <img align="center" src="./lesson2/node_installation8.png" alt="Node.js official site">
+ </p>
+
+
+
+
+
+ 
+
 
     <!-- <div class="section"> -->
       <h2>How the Web Works</h2>
@@ -232,7 +297,7 @@
       <p>This process happens in seconds, often in less than a second, and it's repeated every 
         time you visit a new page or interact with a website.</p>
         <p style="text-align: center;">
-    <img align="center" src="request-response.png" width="400" height="400" alt="Request-Response">
+    <img align="center" src="request-response.png" width="800" height="400" alt="Request-Response">
     </p>
 
 <h2>Understanding URLs</h2>
