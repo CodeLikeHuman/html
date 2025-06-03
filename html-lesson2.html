@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <title>HTML Lesson 1 - Introduction to Web Development</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+.code-container {
+  position: relative;
+  margin: 1.5rem 0;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #2d2d3a;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.copy-btn:hover {
+  opacity: 1;
+}
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: #f0f0f5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 2rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(8px);
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.8rem;
+      letter-spacing: 2px;
+      color: #fff;
+    }
+
+    .logo span {
+      color: #ffd166;
+    }
+
+    nav {
+      display: flex;
+    }
+
+    nav a {
+      color: #f0f0f5;
+      margin-left: 2rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffd166;
+    }
+
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    .menu-toggle div {
+      height: 4px;
+      width: 25px;
+      background: #ffd166;
+      margin: 4px 0;
+      border-radius: 4px;
+      transition: 0.3s ease;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        background-color: rgba(0, 0, 0, 0.85);
+        position: absolute;
+        top: 70px;
+        right: 0px;
+        padding: 1rem 2rem;
+        border-radius: 12px;
+      }
+
+      nav.active {
+        display: flex;
+        z-index: 1000;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 1500px;
+      margin: 0 auto;
+    }
+
+    h1, h2 {
+      color: #ffd166;
+    }
+
+    .section {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      border-radius: 12px;
+    }
+
+    textarea, iframe {
+      width: 100%;
+      border: none;
+      border-radius: 8px;
+      margin-top: 1rem;
+    }
+
+    textarea {
+      min-height: 150px;
+      font-family: monospace;
+      padding: 1rem;
+    }
+
+    iframe {
+      height: 200px;
+      background: white;
+    }
+
+    .btn {
+      margin-top: 1rem;
+      padding: 0.6rem 1.5rem;
+      background: #ffd166;
+      color: #333;
+      border: none;
+      font-weight: bold;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+
+    .quiz input[type="radio"] {
+      margin-right: 10px;
+    }
+
+    .progress {
+      text-align: right;
+      font-weight: bold;
+      color: #90ee90;
+      margin-top: 1rem;
+    }
+
+    .completed {
+      background: #32cd32;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      display: inline-block;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: rgba(0, 0, 0, 0.2);
+      color: #ddd;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo"><span>&#123;</span> Code Like Human 🤖 <span>&#125;</span></div>
+    <div class="menu-toggle" id="menu-toggle">
+      <div></div><div></div><div></div>
+    </div>
+    <nav id="nav">
+     <a href="https://codelikehuman.github.io/main">Home</a>
+      <a href="https://codelikehuman.github.io/main/html-course.html">HTML</a>
+      <a href="https://codelikehuman.github.io/main/learning-path.html">Courses</a>
+      <a href="https://codelikehuman.github.io/main/features.html">Features</a>
+      <a href="https://codelikehuman.github.io/main/about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>HTML Lesson 1: Introduction to Web Development</h1>
+
+    <div class="section">
+      <h2>What is the Web?</h2>
+      <p>The <strong>World Wide Web</strong> (often simply called “the web”) is a vast system of connected documents and 
+        multimedia content, all accessed via the Internet. When you open a browser like Chrome, Safari, 
+        or Firefox and type in a web address, you’re using the web. It allows users to visit websites, 
+        access information, watch videos, shop, play games, and much more—all through web pages displayed on screen.</p>
+        <p>The web operates on a fundamental idea: <strong>request</strong> and <strong>response</strong>. When you visit 
+          a web page, your browser sends a request to a server, which responds with the data needed to display that page.</p>
+
+    <!-- <div class="section"> -->
+      <h2>How the Web Works</h2>
+      <p>At the heart of the web is a model called <strong>client-server architecture</strong>. Here's how it works:
+      When you type a website address (also called a <strong>URL</strong>) into your web browser, your browser becomes 
+      the client. It sends a message to a <strong>web server</strong>, which is a computer that hosts the website. This 
+      message asks the server to send back the contents of the page—usually written in HTML, CSS, and JavaScript.</p>
+      <p>The server receives the request, finds the appropriate files, and sends them back to the 
+        browser. Your browser then reads the code and renders the page on your screen.</p>
+      <p>This process happens in seconds, often in less than a second, and it's repeated every 
+        time you visit a new page or interact with a website.</p>
+        <p style="text-align: center;">
+    <img align="center" src="request-response.png" width="400" height="400" alt="Request-Response">
+    </p>
+
+<h2>Understanding URLs</h2>
+<p>A <strong>URL</strong> stands for <strong>Uniform Resource Locator</strong>, and it's the address used to locate a resource on the web.</p>
+<p>Consider this example URL:</p>
+<p><strong>https://www.example.com/about</strong></p>
+<p>Let's break it down:</p>
+<ul>
+  <li><strong>https://</strong> is the protocol, which tells the browser how to communicate with the server. Most modern sites use HTTPS (the secure version of HTTP).</li>
+  <li><strong>www.example.com</strong> is the domain name, which maps to a specific server on the internet.</li>
+  <li><strong>/about</strong> is the path, which points to a particular file or resource on that server.</li>
+</ul>
+<p>Together, these parts tell your browser exactly where to go and what to request.</p>
+
+<h2>What is HTTP?</h2>
+<p>HTTP stands for <strong>HyperText Transfer Protocol</strong>. It is the foundation of communication on the web. When 
+  your browser requests a page, it uses HTTP to ask the server for the files it needs. The server, in turn, uses 
+  HTTP to send those files back.</p>
+<p>HTTP is a <strong>stateless protocol</strong>, which means each request is independent. Every 
+  time your browser asks for something, the server responds without remembering previous 
+  requests (unless features like cookies or sessions are used).</p>
+<h3>Common HTTP Methods</h3>
+<p>HTTP defines several types of requests, known as <strong>methods</strong>. These tell the server what the browser wants to do.</p>
+<ul>
+  <li><strong>GET:</strong> Used to retrieve data from the server. When you visit a website, your browser uses a GET request.</li>
+  <li><strong>POST:</strong> Used to send data to the server, often when submitting a form (like logging in or signing up).</li>
+  <li><strong>PUT:</strong> Used to update an existing resource on the server.</li>
+  <li><strong>DELETE:</strong> Used to remove a resource.</li>
+  <li><strong>HEAD:</strong> Similar to GET, but it only asks for the headers (metadata), not the actual content.</li>
+</ul>
+<p>Understanding these methods is key to understanding how web applications interact with servers.</p>
+
+<h2>The Core Technologies of the Web: HTML, CSS, and JavaScript</h2>
+<p>Modern web pages are built using three primary technologies: HTML, CSS, and JavaScript. Each plays a distinct role.</p>
+<h3>HTML - The Structure</h3>
+<p><strong>HTML</strong> stands for <strong>HyperText Markup Language</strong>, and it's the backbone of any web page. It defines 
+  the <strong>structure and content</strong>—such as headings, paragraphs, images, lists, and links.</p>
+  <p>For example:</p>
+<div class="code-container">
+  <button class="copy-btn">📋 Copy</button>
+  <pre><code class="language-html">
+    &lt;h1&gt;Welcome to My Site&lt;/h1&gt;
+    &lt;p&gt;This is my homepage.&lt;/p&gt;
+  </code></pre>
+</div>
+<p>In this code, &lt;h1&gt;creates a large heading, and &lt;p&gt; defines a paragraph. Every visible element on a web page starts with HTML.</p>
+
+<h3>CSS - The Style</h3>
+<p><strong>CSS</strong> stands for <strong>Cascading Style Sheets</strong>. It's responsible for how a web page 
+<strong>looks</strong>—the layout, fonts, colors, spacing, and overall design. Without CSS, web pages would look 
+very plain and difficult to use.</p>
+<p>For example:</p>
+<div class="code-container">
+  <button class="copy-btn">📋 Copy</button>
+  <pre><code class="language-css">
+h1 {
+  color: navy;
+  text-align: center;
+}
+  </code></pre>
+</div>
+<p>This style makes the heading text navy blue and centers it on the page.</p>
+<p>CSS allows web developers to create beautiful, responsive designs that work across devices.</p>
+
+<h2>JavaScript - The Behavior</h2>
+<p><strong>JavaScript</strong> is a <strong>programming language</strong> used to add <strong>interactivity and dynamic behavior</strong> 
+  to web pages. It can respond to user actions like clicks, form submissions, and scrolling.</p>
+<p>For example:</p>
+<div class="code-container">
+  <button class="copy-btn">📋 Copy</button>
+  <pre><code class="language-javascript">
+document.querySelector("h1").addEventListener("click", function() {
+  alert("You clicked the heading!");
+});
+  </code></pre>
+</div>
+<p>This script displays a pop-up alert when the user clicks on the heading. JavaScript powers 
+  many modern web features—like image sliders, form validation, and real-time updates.</p>
+<h2>How HTML, CSS, and JavaScript Work Together</h2>
+<p>These three technologies work together seamlessly to create interactive, visually appealing web experiences:</p>
+<ul>
+  <li><strong>HTML</strong> provides the content.</li>
+  <li><strong>CSS</strong> styles and formats the content.</li>
+  <li><strong>JavaScript</strong></li>makes the content dynamic and interactive.
+</ul>
+<p>When your browser receives a webpage, it first processes the HTML to create the 
+  structure. Then, it applies the CSS to style it. Finally, it runs JavaScript to add any interactive features.</p>
+
+
+
+
+
+
+
+      <pre><code>&lt;html&gt;
+  &lt;head&gt;&lt;title&gt;My Page&lt;/title&gt;&lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello World&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    <!-- </div> -->
+
+
+<div class="code-container">
+  <button class="copy-btn">📋 Copy</button>
+  <pre><code class="language-html">
+&lt;h1&gt;Hello, World!&lt;/h1&gt;
+  </code></pre>
+</div>
+
+<div class="section">
+      <h2>🧪 Δοκίμασε το!</h2>
+      <textarea id="editor">
+<html>
+  <body>
+    <h1>Hello world</h1>
+    <p>Γράψε εδώ τον HTML κώδικά σου!</p>
+  </body>
+</html>
+      </textarea>
+      <button class="btn" onclick="runCode()">Δες το αποτέλεσμα</button>
+      <iframe id="output"></iframe>
+    </div>
+
+    <div class="section">
+      <h2>📝 Quiz</h2>
+      <form class="quiz" onsubmit="return checkAnswer(event)">
+        <p>Ποιο tag χρησιμοποιείται για επικεφαλίδα επιπέδου 1;</p>
+        <label><input type="radio" name="q1" value="a" /> &lt;p&gt;</label><br />
+        <label><input type="radio" name="q1" value="b" /> &lt;h1&gt;</label><br />
+        <label><input type="radio" name="q1" value="c" /> &lt;div&gt;</label><br />
+        <button class="btn" type="submit">Έλεγχος</button>
+        <p id="quiz-result"></p>
+      </form>
+    </div>
+<!-- Πλοήγηση Μαθημάτων -->
+<div class="section" style="text-align: center;">
+  <!-- <a href="html-lesson0.html" class="btn">⬅ Previous</a> -->
+  <a href="html-lesson2.html" class="btn">Next ➡</a>
+</div>
+
+<!-- Σύστημα Προόδου -->
+<div class="section progress">
+  <label>
+    <input type="checkbox" id="mark-complete" /> Check when you are done
+  </label>
+  <p id="progress-status"></p>
+</div>
+
+<!-- AI Βοηθός (Mock FAQ style) -->
+<div class="section">
+  <h2>🤖 Βοήθεια από τον AI Βοηθό</h2>
+  <p><strong>Ερώτηση:</strong> Τι κάνει το &lt;h1&gt; tag;</p>
+  <p><strong>Απάντηση:</strong> Δημιουργεί μια επικεφαλίδα επιπέδου 1. Είναι σημαντικό για τη δομή και SEO μιας σελίδας.</p>
+
+  <p><strong>Ερώτηση:</strong> Μπορώ να έχω πολλά &lt;h1&gt; σε μια σελίδα;</p>
+  <p><strong>Απάντηση:</strong> Τεχνικά ναι, αλλά συνιστάται να έχεις μόνο ένα κύριο &lt;h1&gt; για καλύτερη προσβασιμότητα.</p>
+</div>
+
+<!-- Υποβολή Ερώτησης -->
+<!-- <div class="section">
+  <h2>💬 Έχεις Απορία;</h2>
+  <form onsubmit="submitQuestion(event)">
+    <textarea id="user-question" placeholder="Γράψε την ερώτησή σου εδώ..." required></textarea>
+    <button class="btn" type="submit">Υποβολή</button>
+    <p id="question-feedback"></p>
+  </form>
+</div> -->
+
+    <!-- <div class="section progress">
+      <span class="completed">✔ Ολοκληρώθηκε</span>
+    </div> -->
+  </main>
+
+  <footer>
+    &copy; 2025 Code Like Human. All rights reserved.
+  </footer>
+
+<script>
+  // Mobile Nav
+  document.getElementById('menu-toggle').addEventListener('click', () => {
+    document.getElementById('nav').classList.toggle('active');
+  });
+
+  // Run HTML Editor
+  function runCode() {
+    const code = document.getElementById("editor").value;
+    const output = document.getElementById("output");
+    output.srcdoc = code;
+  }
+
+  // Quiz Logic
+  function checkAnswer(event) {
+    event.preventDefault();
+    const answer = document.querySelector('input[name="q1"]:checked');
+    const result = document.getElementById("quiz-result");
+    if (answer?.value === "b") {
+      result.textContent = "Σωστά! ✅";
+      result.style.color = "lightgreen";
+    } else {
+      result.textContent = "Λάθος. Προσπάθησε ξανά. ❌";
+      result.style.color = "pink";
+    }
+  }
+
+  // Progress tracking
+  const checkbox = document.getElementById("mark-complete");
+  const status = document.getElementById("progress-status");
+  const lessonKey = "lesson-html-1-completed";
+
+  checkbox.addEventListener("change", () => {
+    if (checkbox.checked) {
+      localStorage.setItem(lessonKey, "true");
+      status.innerHTML = '<span class="completed">✔ Ολοκληρώθηκε</span>';
+    } else {
+      localStorage.removeItem(lessonKey);
+      status.textContent = "";
+    }
+  });
+
+  if (localStorage.getItem(lessonKey) === "true") {
+    checkbox.checked = true;
+    status.innerHTML = '<span class="completed">✔ Ολοκληρώθηκε</span>';
+  }
+
+  // Submit Question
+  function submitQuestion(e) {
+    e.preventDefault();
+    const question = document.getElementById("user-question").value;
+    const feedback = document.getElementById("question-feedback");
+    feedback.textContent = "Η ερώτησή σου καταχωρήθηκε ✅ Θα απαντηθεί σύντομα.";
+    document.getElementById("user-question").value = "";
+  }
+</script>
+<script>
+  document.querySelectorAll('.copy-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const code = btn.nextElementSibling.innerText;
+      navigator.clipboard.writeText(code).then(() => {
+        btn.textContent = '✅ Copied!';
+        setTimeout(() => (btn.textContent = '📋 Copy'), 1500);
+      });
+    });
+  });
+</script>
+</body>
+</html>
