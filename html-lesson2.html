@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-  <title>HTML Lesson 1 - Introduction to Web Development</title>
+  <title>HTML Lesson 2 - Node.Js and WebStorm Installation</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
@@ -328,31 +328,42 @@ WebStorm is a coding tool that helps you write, debug, and manage web projects �
   <p style="text-align: center;">
  <img align="center" src="./lesson2/project_creation12.png"  alt="WebStorm installation">
  </p>
-
-
-
-
-
-
-
-    <div class="section">
+<div class="section">
       <h2>📝 Quiz</h2>
-      <form class="quiz" onsubmit="return checkAnswer(event)">
-        <p>Ποιο tag χρησιμοποιείται για επικεφαλίδα επιπέδου 1;</p>
-        <label><input type="radio" name="q1" value="a" /> &lt;p&gt;</label><br />
-        <label><input type="radio" name="q1" value="b" /> &lt;h1&gt;</label><br />
-        <label><input type="radio" name="q1" value="c" /> &lt;div&gt;</label><br />
-        <button class="btn" type="submit">Έλεγχος</button>
-        <p id="quiz-result"></p>
+      <form class="quiz" onsubmit="return checkAnswer1(event)">
+        <p>What is the recommended version of Node.js to download for most users?</p>
+        <label><input type="radio" name="q1" value="a" /> The latest Current version</label><br />
+        <label><input type="radio" name="q1" value="b" /> The LTS (Long Term Support) version</label><br />
+        <label><input type="radio" name="q1" value="c" />The Beta version</label><br />
+        <label><input type="radio" name="q1" value="d" />The Nightly build</label><br />
+        <button class="btn" type="submit">Check</button>
+        <p id="quiz-result1"></p>
       </form>
     </div>
-<!-- Πλοήγηση Μαθημάτων -->
-<div class="section" style="text-align: center;">
-  <!-- <a href="html-lesson0.html" class="btn">⬅ Previous</a> -->
-  <a href="html-lesson2.html" class="btn">Next ➡</a>
-</div>
+ <div class="section">
+          <form class="quiz" onsubmit="return checkAnswer2(event)">
+        <p>During the Node.js installation on Windows, which of the following steps is recommended?</p>
+        <label><input type="radio" name="q2" value="a" /> Uncheck all default components</label><br />
+        <label><input type="radio" name="q2" value="b" /> Change the installation path to a custom directory</label><br />
+        <label><input type="radio" name="q2" value="c" />Accept the license agreement and leave default components checked</label><br />
+        <label><input type="radio" name="q2" value="d" />Skip adding Node.js to the system PATH</label><br />
+        <button class="btn" type="submit">Check</button>
+        <p id="quiz-result2"></p>
+      </form>
+    </div>
+ <div class="section">
+          <form class="quiz" onsubmit="return checkAnswer3(event)">
+        <p>When creating a new project in WebStorm using the Express generator, what must be ensured?</p>
+        <label><input type="radio" name="q3" value="a" /> Node.js is not installed</label><br />
+        <label><input type="radio" name="q3" value="b" /> The project folder is located on the desktop</label><br />
+        <label><input type="radio" name="q3" value="c" />The Express generator is manually configured</label><br />
+        <label><input type="radio" name="q3" value="d" />Node.js is installed and selected in the project setup</label><br />
+        <button class="btn" type="submit">Check</button>
+        <p id="quiz-result3"></p>
+      </form>
+    </div>
 
-<!-- Σύστημα Προόδου -->
+    <!-- Σύστημα Προόδου -->
 <div class="section progress">
   <label>
     <input type="checkbox" id="mark-complete" /> Check when you are done
@@ -360,28 +371,11 @@ WebStorm is a coding tool that helps you write, debug, and manage web projects �
   <p id="progress-status"></p>
 </div>
 
-<!-- AI Βοηθός (Mock FAQ style) -->
-<div class="section">
-  <h2>🤖 Βοήθεια από τον AI Βοηθό</h2>
-  <p><strong>Ερώτηση:</strong> Τι κάνει το &lt;h1&gt; tag;</p>
-  <p><strong>Απάντηση:</strong> Δημιουργεί μια επικεφαλίδα επιπέδου 1. Είναι σημαντικό για τη δομή και SEO μιας σελίδας.</p>
-
-  <p><strong>Ερώτηση:</strong> Μπορώ να έχω πολλά &lt;h1&gt; σε μια σελίδα;</p>
-  <p><strong>Απάντηση:</strong> Τεχνικά ναι, αλλά συνιστάται να έχεις μόνο ένα κύριο &lt;h1&gt; για καλύτερη προσβασιμότητα.</p>
+<!-- Πλοήγηση Μαθημάτων -->
+<div class="section" style="text-align: center;">
+  <a href="html-lesson1.html" class="btn">⬅ Previous</a>
+  <a href="html-lesson3.html" class="btn">Next ➡</a>
 </div>
-
-<!-- Υποβολή Ερώτησης -->
-<!-- <div class="section">
-  <h2>💬 Έχεις Απορία;</h2>
-  <form onsubmit="submitQuestion(event)">
-    <textarea id="user-question" placeholder="Γράψε την ερώτησή σου εδώ..." required></textarea>
-    <button class="btn" type="submit">Υποβολή</button>
-    <p id="question-feedback"></p>
-  </form>
-</div> -->
-
-    <!-- <div class="section progress">
-      <span class="completed">✔ Ολοκληρώθηκε</span>
     </div> -->
   </main>
 
@@ -403,15 +397,40 @@ WebStorm is a coding tool that helps you write, debug, and manage web projects �
   }
 
   // Quiz Logic
-  function checkAnswer(event) {
+ // Quiz Logic
+  function checkAnswer1(event) {
     event.preventDefault();
     const answer = document.querySelector('input[name="q1"]:checked');
-    const result = document.getElementById("quiz-result");
+    const result = document.getElementById("quiz-result1");
     if (answer?.value === "b") {
-      result.textContent = "Σωστά! ✅";
+      result.textContent = "Correct! ✅";
       result.style.color = "lightgreen";
     } else {
-      result.textContent = "Λάθος. Προσπάθησε ξανά. ❌";
+      result.textContent = "Wrong. Try again. ❌";
+      result.style.color = "pink";
+    }
+  }
+    function checkAnswer2(event) {
+    event.preventDefault();
+    const answer = document.querySelector('input[name="q2"]:checked');
+    const result = document.getElementById("quiz-result2");
+    if (answer?.value === "c") {
+      result.textContent = "Correct! ✅";
+      result.style.color = "lightgreen";
+    } else {
+      result.textContent = "Wrong. Try again. ❌";
+      result.style.color = "pink";
+    }
+  }
+      function checkAnswer3(event) {
+    event.preventDefault();
+    const answer = document.querySelector('input[name="q3"]:checked');
+    const result = document.getElementById("quiz-result3");
+    if (answer?.value === "d") {
+      result.textContent = "Correct! ✅";
+      result.style.color = "lightgreen";
+    } else {
+      result.textContent = "Wrong. Try again. ❌";
       result.style.color = "pink";
     }
   }
@@ -424,7 +443,7 @@ WebStorm is a coding tool that helps you write, debug, and manage web projects �
   checkbox.addEventListener("change", () => {
     if (checkbox.checked) {
       localStorage.setItem(lessonKey, "true");
-      status.innerHTML = '<span class="completed">✔ Ολοκληρώθηκε</span>';
+      status.innerHTML = '<span class="completed">✔ Completed</span>';
     } else {
       localStorage.removeItem(lessonKey);
       status.textContent = "";
@@ -433,8 +452,11 @@ WebStorm is a coding tool that helps you write, debug, and manage web projects �
 
   if (localStorage.getItem(lessonKey) === "true") {
     checkbox.checked = true;
-    status.innerHTML = '<span class="completed">✔ Ολοκληρώθηκε</span>';
+    status.innerHTML = '<span class="completed">✔ Completed</span>';
   }
+
+
+
 
   // Submit Question
   function submitQuestion(e) {
